@@ -1,7 +1,4 @@
 # Beyond-Reproduction <br><sub><sup>A Paired-Task Framework for Assessing LLM Comprehension and Creativity in Literary Translation</sup></sub>
-<p align="left">
-  <img src="https://drive.google.com/uc?export=view&id=19cBCYrAndz6ncbx-QxSa4ZpPvYVZ-cxK" width="80" alt="Lab Logo" />
-</p>
 
 [![📄 arXiv](https://img.shields.io/badge/View%20on%20arXiv-B31B1B?logo=arxiv&labelColor=gray)](to be updated)
 
@@ -11,13 +8,13 @@ beyond_imitation/
 ├── prompt_openrouter.py      # fast API call for efficient and scalable generation and evaluation
 ├── model_list_full.txt       # Evaluated model list
 ├── task1/                    # Claim-evaluation benchmark
-│   ├── dataset/              # task 1 dataset/task 1 adversarial dataset (to prevent data contamination, please download separatly; See instruction below)
+│   ├── dataset/              # task 1 dataset/task 1 adversarial dataset (to prevent data contamination, please download separately; See instructions below)
 │   ├── step1_task1_prompt_gen.py # generate prompt
 │   ├── step2_task1_batch_run.py  # batch evaluation of models
 │   ├── utils.py              # JSON/text helpers for notebooks
 │   └── *.ipynb               # Result analysis and plots generation for results reproducibility
 └── task2/                    # Translational creativity benchmark
-    ├── dataset/              # task 2 dataset (annotated En-Zh/En-Nl parallel corpus; )
+    ├── dataset/              # task 2 dataset (annotated En-Zh/En-Nl parallel corpus)
     ├── step1_task2_TransPrompt_gen.py
     ├── step2_batch_task2_translation.py   
     ├── task2_evaluator.py
@@ -55,7 +52,8 @@ Key arguments:
 --output-dir: output location
 ```
 
-- Instructions to reproduce results in Task 1 and 2, see .ipynb in Task 1 and Task 2 folders.
+- **Instructions to reproduce results** in Task 1 and 2, see .ipynb in Task 1 and Task 2 folders.
+- **To download annotated datasets** upon agreeing on the following conditions: 
 
 ## 📊 Results Overview
 ![Task summary](Fig/figure1.png)
