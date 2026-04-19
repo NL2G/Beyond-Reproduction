@@ -70,7 +70,7 @@ python step3_2_task2_evaluator.py
 - **Instructions to reproduce results** in Tasks 1 and 2, see .ipynb in Task 1 and 2 folders.
 - **To download annotated datasets** upon agreeing on the following conditions: 
 
-## 📊 Results Overview
+## 📊 Dataset Overview
 ![Task summary](Fig/figure1.png)
 
 ## 🤝 Contributing
