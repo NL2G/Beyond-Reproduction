@@ -44,7 +44,7 @@ python step1_task2_TransPrompt_gen.py
 python prompt_openrouter.py \
   --file path/to/prompt.csv \
   --model anthropic/claude-3.7-sonnet:thinking \
-  --temperature 0.3 \ (for Task 1 benchmark: 0.3 for less randomness and literary reasoning; for task 2 auto-annotation: 0 for reproducibility; for task 2 literary translation: 0.7)
+  --temperature 0.3 \ # (for Task 1 benchmark: 0.3 for less randomness while preserving literary reasoning; for task 2 auto-annotation: 0 for reproducibility; for task 2 literary translation: 0.7 for creative freedom)
   --content-column prompt \
   --output-dir path/to/output.csv
 
