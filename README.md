@@ -33,10 +33,14 @@ beyond_imitation/
 - Instructions to run translation generation and evaluation with the shared runner
 - All experiments use a unified interface (we also upload batch run .py for each separate task):
 ```bash
-# Step1: Build prompts from datasets
-for task 1: step1_task1_prompt_gen.py
-for task 2: step1_task2_TransPrompt_gen.py
-
+# Step 1: Build prompts from datasets
+## for task 1:
+python step1_task1_prompt_gen.py
+## for task 2:
+python step1_task2_TransPrompt_gen.py
+```
+```bash
+# Step 2: run translation generation and evaluation with the shared runner separately or in batch
 python prompt_openrouter.py \
   --file path/to/prompt.csv \
   --model anthropic/claude-3.7-sonnet:thinking \
@@ -52,7 +56,18 @@ Key arguments:
 --output-dir: output location
 ```
 
-- **Instructions to reproduce results** in Task 1 and 2, see .ipynb in Task 1 and Task 2 folders.
+```bash
+#Step 2: run evaluation/translation in batch
+## for task1:
+python step2_task1_batch_run.py
+## for task2 translation:
+python step2_batch_task2_translation.py
+## for task2 evaluation:
+# Run step3_1_AutoEval_pipeline.ipynb for prompt and data preparation, and when instructed run: 
+python step3_2_task2_evaluator.py
+```
+
+- **Instructions to reproduce results** in Tasks 1 and 2, see .ipynb in Task 1 and 2 folders.
 - **To download annotated datasets** upon agreeing on the following conditions: 
 
 ## 📊 Results Overview
