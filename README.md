@@ -1,6 +1,6 @@
 # Beyond-Reproduction <br><sub><sup>A Paired-Task Framework for Assessing LLM Comprehension and Creativity in Literary Translation</sup></sub>
 
-[![📄 arXiv](https://img.shields.io/badge/View%20on%20arXiv-B31B1B?logo=arxiv&labelColor=gray)](to be updated)
+[![📄 arXiv](https://img.shields.io/badge/View%20on%20arXiv-B31B1B?logo=arxiv&labelColor=gray)](https://arxiv.org/abs/2604.18169)
 
 ## 📁 Repository Structure
 ```
@@ -8,10 +8,11 @@ beyond_imitation/
 ├── prompt_openrouter.py      # fast API call for efficient and scalable generation and evaluation
 ├── model_list_full.txt       # Evaluated model list
 ├── task1/                    # Claim-evaluation benchmark
-│   ├── dataset/              # task 1 dataset/task 1 adversarial dataset (to prevent data contamination, please download separately; See instructions below)
+│   ├── task1_dataset/            # task 1 dataset & megred model benchmark outputs (to prevent data label leakage, please download separately; See instructions below)
+│   ├── task1_plot/               # generated plots
 │   ├── step1_task1_prompt_gen.py # generate prompt
 │   ├── step2_task1_batch_run.py  # batch evaluation of models
-│   ├── utils.py              # JSON/text helpers for notebooks
+│   ├── utils.py              # JSON/text for parsing model response
 │   └── *.ipynb               # Result analysis and plots generation for results reproducibility
 └── task2/                    # Translational creativity benchmark
     ├── dataset/              # task 2 dataset (annotated En-Zh/En-Nl parallel corpus)
