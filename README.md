@@ -68,7 +68,7 @@ python step3_2_task2_evaluator.py
 ```
 
 - **Instructions to reproduce results** in Tasks 1 and 2, see .ipynb in Task 1 and 2 folders.
-- **To download annotated datasets** upon agreeing on the following conditions: 
+- **To download annotated datasets** upon agreeing on the following conditions: This dataset is intended for academic purposes only. To present label leakage, please do not upload/redistribute this data without the author's consent. The use of this dataset requires agreement to the conditions listed in the [form]([https://forms.gle/tGi64MBt59HL4QBQ7](https://forms.gle/UeVjEPrrnJx7D4Yv5)). The dataset will be available for downloading after filling out the form. 
 
 ## 📊 Dataset Overview
 ![Task summary](Fig/figure1.png)
