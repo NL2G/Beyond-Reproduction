@@ -21,7 +21,7 @@ python batch_task1_run.py (attention: this will take a long time to run and cons
 
 '''
 import pandas as pd
-df = pd.read_csv('dataset/task1_annotation.csv')
+df = pd.read_csv('task1_dataset/task1_annotation.csv')
 print(df.columns)
 df["pre"] = df.apply(lambda x: str(int(x["idx_claim"])) + "." + x["Claim"], axis =1)
 print(df.shape)
