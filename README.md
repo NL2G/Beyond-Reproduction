@@ -14,13 +14,12 @@ beyond_imitation/
 │   ├── step2_task1_batch_run.py  # batch evaluation of models
 │   ├── utils.py              # JSON/text for parsing model response
 │   └── *.ipynb               # Result analysis and plots generation for results reproducibility
-└── task2/                    # Translational creativity benchmark
-    ├── dataset/              # task 2 dataset (annotated En-Zh/En-Nl parallel corpus)
-    ├── step1_task2_TransPrompt_gen.py
-    ├── step2_batch_task2_translation.py   
-    ├── task2_evaluator.py
-    ├── task2_bench/          # Generated prompts and model outputs
-    └── *.ipynb               # Auto-eval and human-eval analysis
+└── task2_ucp/                    # Translational creativity benchmark
+    ├── task2_dataset/              # task 2 dataset (annotated En-Zh/En-Nl parallel corpus, file with few-shot examples for prompt generation; model meta + folder intermediate with generated csv during the running + folder result with auto-annotation result by Qwen3-80b)
+    ├── step1_task2_TransPrompt_gen.py     # generate prompt for task 1 translation
+    ├── step2_batch_task2_translation.py   # batch translation generation of models
+    ├── task2_evaluator.py    # batch auto-annotation of models
+    └── *.ipynb               # Auto-eval pipeline and human-eval analysis
 ```
 
 ---
@@ -29,7 +28,7 @@ beyond_imitation/
 
 - **Two benchmark tasks**:
   - Task 1 model benchmark and adversarial test, see [task1](task1_comprehension/)
-  - Task 2 analysis of human annotation and automatic annotation, see [task2](task2/)
+  - Task 2 analysis of human annotation and automatic annotation, see [task2](task2_ucp/)
  
 - Instructions to run translation generation and evaluation with the shared runner
 - All experiments use a unified interface (we also upload batch run .py for each separate task):
@@ -100,7 +99,15 @@ Specify the license under which this code is shared.
 If you use this work in your research, please cite it as:
 
 ```bibtex
-to be updated
+@misc{zhang2026reproductionpairedtaskframeworkassessing,
+      title={Beyond Reproduction: A Paired-Task Framework for Assessing LLM Comprehension and Creativity in Literary Translation}, 
+      author={Ran Zhang and Steffen Eger and Arda Tezcan and Wei Zhao and Simone Paolo Ponzetto and Lieve Macken},
+      year={2026},
+      eprint={2604.18169},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2604.18169}, 
+}
 ```
 
 ---
