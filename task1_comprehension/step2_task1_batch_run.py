@@ -13,20 +13,20 @@ python ../prompt_openrouter.py --file task1_prompt.csv --model anthropic/claude-
 temperature = "0.3"
 content_columns = ["prompt"]
 
-df = pd.read_csv("model_list_ablation.txt", header=None, names=["model"])
+df = pd.read_csv("model_list_ablation.txt", header=None, names=["model"]) # ../model_list.txt # for runing full model output, uncomment the # in the following
 models = df["model"].tolist()
 print(models)
 
 for model in models:
     for col in content_columns:
         cmd = [
-                sys.executable,  # same python interpreter
+                sys.executable,  
                 "../prompt_openrouter.py",
-                "--file", "task1_dataset/adversarial_task1_prompt.csv", #"task1_prompt.csv", 
+                "--file", "task1_comprehension/task1_dataset/adversarial_task1_prompt.csv", #"task1_prompt.csv", 
                 "--model", model,
                 "--temperature", temperature,
                 "--content-column", col,
-                "--output-dir", "task1_adversarial_bench_result/", #task1_bench_result/
+                "--output-dir", "task1_comprehension/task1_adversarial_bench_result/", #task1_bench_result/
             ]
 
         print("Running:", " ".join(cmd))
