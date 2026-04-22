@@ -7,7 +7,7 @@
 beyond_imitation/
 ├── prompt_openrouter.py      # fast API call for efficient and scalable generation and evaluation
 ├── model_list_full.txt       # Evaluated model list
-├── task1/                    # Claim-evaluation benchmark
+├── task1_comprehension/                    # Claim-evaluation benchmark
 │   ├── task1_dataset/            # task 1 dataset & megred model benchmark outputs (to prevent data label leakage, please download separately; See instructions below)
 │   ├── task1_plot/               # generated plots
 │   ├── step1_task1_prompt_gen.py # generate prompt
@@ -28,7 +28,7 @@ beyond_imitation/
 ## 🚀 Usage
 
 - **Two benchmark tasks**:
-  - Task 1 model benchmark and adversarial test, see [task1](task1/)
+  - Task 1 model benchmark and adversarial test, see [task1](task1_comprehension/)
   - Task 2 analysis of human annotation and automatic annotation, see [task2](task2/)
  
 - Instructions to run translation generation and evaluation with the shared runner
